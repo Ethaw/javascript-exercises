@@ -14,7 +14,7 @@ const removeFromArray0 = function(arr, ...values) {
 const removeFromArray = function(arr, ...values) {
   // Using filter and set
   values = new Set(values);
-  return arr.filter(x => !(values.has(x)));;
+  return arr.filter(x => !values.has(x));
 };
 
 module.exports = removeFromArray;

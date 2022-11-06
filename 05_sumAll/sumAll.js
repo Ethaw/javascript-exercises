@@ -1,10 +1,7 @@
 const sumAll = function(x, y) {
-  const isInvalidArg = x => {
-    return (typeof x !== 'number' || parseInt(x) !== x || x < 0 
-            ? true : false)
-  }
+  const isPosInt = x => Number.isInteger(x) && x >= 0 ? true : false
 
-  if (isInvalidArg(x) || isInvalidArg(y)) {
+  if (!isPosInt(x) || !isPosInt(y)) {
     return 'ERROR';
   }
 
